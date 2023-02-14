@@ -22,7 +22,7 @@ class Main {
 		StringBuffer sb = new StringBuffer();
 		int idx = 0;
 		int num = 1;
-		while (idx < N) {
+		while (idx < N && num <= N + 1) {
 			if (stack.isEmpty()) {
 				stack.add(num);
 				sb.append("+\n");
@@ -37,13 +37,12 @@ class Main {
 				sb.append("+\n");
 				num++;
 			}
-			if (num > N + 1) {
-				bw.write("NO");
-				break;
-			}
+
 		}
 		if (num <= N + 1) {
 			bw.write(sb.toString());
+		} else {
+			bw.write("NO");
 		}
 		bw.flush();
 		bw.close();
