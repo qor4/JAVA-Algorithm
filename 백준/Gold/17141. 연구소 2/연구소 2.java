@@ -66,18 +66,15 @@ public class Main {
 					copyMap[c[0] + d[0]][c[1] + d[1]] = 2;
 				}
 			}
-			boolean flag = true;
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
 					if (copyMap[i][j] == 0) {
-						flag = false;
-						break;
+						return;
 					}
 				}
 			}
 
-			if (flag)
-				ans = Math.min(ans, sec);
+			ans = Math.min(ans, sec);
 			return;
 		}
 		for (int i = start; i < list.size(); i++) {
